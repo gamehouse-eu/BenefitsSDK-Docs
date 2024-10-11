@@ -1,0 +1,13 @@
+GameHouse Simple SDK
+======================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: General
+
+   how_to/installation
+   how_to/api/api
+   how_to/usage
+   how_to/testing
+
+

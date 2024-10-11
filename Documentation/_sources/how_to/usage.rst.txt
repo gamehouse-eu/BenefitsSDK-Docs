@@ -1,0 +1,79 @@
+Usage
+======================
+
+How this works
+----------------
+
+To authenticate a user, you need to make some calls against our SDK.
+
+The first step, is asking the user to input their email. Once you have the email, you need to call `StartLogin`, which will send a One Time Password (OTP) to the provided email address.
+
+After they received the code by email, you need to call `Validate` which will send both the email adress and the OTP to authenticate properly.
+
+Once authenticated, the SDK will store the login token locally, which will persist until the user calls `Logout` explicitly.
+
+On future app startups, the SDK will take the saved tokens, and re-authenticate on background when calling the `Initialize`.
+
+Initialization
+----------------------
+
+It's important, at the start of your game, to initialize the SimpleSDK. You can do this by calling:
+
+ .. code-block:: none
+
+    ISimpleSdk.instance.Initialize();
+
+Keep in mind, that if you need to, you can await this call, so execution continues once the initialization is finished.
+
+After doing the initialization, you can access `IsAuthenticated` && `IsUserSubscribed`.
+
+Login
+----------------------
+At some point in your game, you will want the user to login. For this, you can create your own prefab, or use LoginContainer prefab as a base.
+
+The first step, is to prompt the user for their email address, and make a call to:
+
+ .. code-block:: none
+
+    var success = await _simpleSdk.StartLogin(<user_email>);
+
+If sucess returns `true`, it means that an email with a validation code was sent to the user.
+
+The next step, is to prompt the user to input that validation code, and make a call to:
+
+ .. code-block:: none
+    
+    var success = await _simpleSdk.Validate(<user_email>, <validation_code>);
+
+If sucess returns `true`, it means the user is already logged in with the SimpleSdk.
+
+Keep in mind, that you only need to do this once (unless the user logs out). After each initialization, if the user has valid credentials he will be kept logged in.
+
+Logout
+----------------------
+If you detect that user is logged in, you need to provide an option to log out.
+
+To do this, make a call to:
+
+ .. code-block:: none
+
+    ISimpleSdk.instance.Logout();
+
+Listen to events
+----------------------
+
+The SDK provides two events `OnUserLoggedIn` & `OnUserLoggedOut` that you can listen to and react accordingly.
+
+Event Tracking
+----------------------
+If you were asked to send any custom event by your GameHouse point of contact, you can do that by making the call to:
+
+ .. code-block:: none
+
+    ISimpleSdk.instance.EventTracker.TrackCustomEvent(<event_name>, <event_params>);
+
+
+Sample Scene
+----------------------   
+From the Package Manager UI, you can import the Sample scene <sample_name> to see how all of this should work.
+This contains the scene itself, and some prefabs that you can use as a starting point for your implementation.

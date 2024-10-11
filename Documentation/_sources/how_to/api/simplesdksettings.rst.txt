@@ -1,0 +1,8 @@
+SimpleSdkSettings
+======================
+
+.. doxygenclass:: GameHouse::SimpleSDK::Settings::SimpleSdkSettings
+   :project: SimpleSDK
+   :members:
+   :protected-members:
+   :private-members:

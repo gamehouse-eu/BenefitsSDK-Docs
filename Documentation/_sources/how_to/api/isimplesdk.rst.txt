@@ -1,0 +1,8 @@
+ISimpleSDK
+======================
+
+.. doxygeninterface:: GameHouse::SimpleSDK::ISimpleSdk
+   :project: SimpleSDK
+   :members:
+   :protected-members:
+   :private-members:
