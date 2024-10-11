@@ -94,10 +94,103 @@
              
   <section id="isimplesdk">
 <h1>ISimpleSDK<a class="headerlink" href="#isimplesdk" title="Link to this heading"></a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygeninterface: Cannot find file: /home/runner/work/simple-sdk/simple-sdk/repo/docs/build/xml/index.xml</p>
+<dl class="cs interface">
+<dt class="sig sig-object cs" id="interface-GameHouse.SimpleSDK.ISimpleSdk">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk"></span><em class="property"><span class="pre">interface</span> </em><span class="sig-name descname"><span class="pre">GameHouse.SimpleSDK.ISimpleSdk</span></span><a class="headerlink" href="#interface-GameHouse.SimpleSDK.ISimpleSdk" title="Link to this definition"></a></dt>
+<dd><p>Subclassed by GameHouse.SimpleSDK.SimpleSdk</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-GameHouse.SimpleSDK.ISimpleSdk.Initialize">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1a89f624e1d61d75dddd7fb630727b7901"></span><span class="pre">Task</span> <span class="sig-name descname"><span class="pre">Initialize</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-GameHouse.SimpleSDK.ISimpleSdk.Initialize" title="Link to this definition"></a></dt>
+<dd><p>Needs to be called when the game starts </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-GameHouse.SimpleSDK.ISimpleSdk.StartLogin">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1a855c750cda65a1e42d12c51f8974b84d"></span><span class="pre">Task</span><span class="pre">&lt;</span><span class="pre">bool</span><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">StartLogin</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">email</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-GameHouse.SimpleSDK.ISimpleSdk.StartLogin" title="Link to this definition"></a></dt>
+<dd><p>Starts the login process </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Email to login with</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-GameHouse.SimpleSDK.ISimpleSdk.Validate">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1a34e3a714127d86f75a3b78e9573ebbe8"></span><span class="pre">Task</span><span class="pre">&lt;</span><span class="pre">bool</span><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">Validate</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">email</span></em>, <span class="pre">string</span> <em><span class="pre">otp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-GameHouse.SimpleSDK.ISimpleSdk.Validate" title="Link to this definition"></a></dt>
+<dd><p>Validates with backend sending the OTP received by email </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Email to login with</p>
+</dd>
+<dt class="field-even">Param otp<span class="colon">:</span></dt>
+<dd class="field-even"><p>One time password received by the user</p>
+</dd>
+<dt class="field-odd">Return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response from the backend</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-GameHouse.SimpleSDK.ISimpleSdk.Logout">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1aff3f7d8ae18030e16a76517109fc8fc9"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">Logout</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-GameHouse.SimpleSDK.ISimpleSdk.Logout" title="Link to this definition"></a></dt>
+<dd><p>Removes both the session &amp; refresh token </p>
+</dd></dl>
+
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-GameHouse.SimpleSDK.ISimpleSdk.instance">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1ae482f3699e4c8b620e8c688ce1ad1341"></span><a class="reference internal" href="#interface-GameHouse.SimpleSDK.ISimpleSdk" title="interface: GameHouse.SimpleSDK.ISimpleSdk"><span class="pre">ISimpleSdk</span></a> <span class="sig-name descname"><span class="pre">instance</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-GameHouse.SimpleSDK.ISimpleSdk.instance" title="Link to this definition"></a></dt>
+<dd><p>Instance of the SimpleSdk </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-GameHouse.SimpleSDK.ISimpleSdk.IsAuthenticated">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1a23693b08945a4bd902bb2987ee4a2dd1"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsAuthenticated</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-GameHouse.SimpleSDK.ISimpleSdk.IsAuthenticated" title="Link to this definition"></a></dt>
+<dd><p>Returns true after the token has been validated during this session </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-GameHouse.SimpleSDK.ISimpleSdk.IsUserSubscribed">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1a0a60531d68679961305cfa1d45e2590e"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsUserSubscribed</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-GameHouse.SimpleSDK.ISimpleSdk.IsUserSubscribed" title="Link to this definition"></a></dt>
+<dd><p>Returns true if the user is authenticated and is a subscriber </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-GameHouse.SimpleSDK.ISimpleSdk.IsSdkInitialized">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1aae8cbc583fd32149d9b5e5d28f265444"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsSdkInitialized</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-GameHouse.SimpleSDK.ISimpleSdk.IsSdkInitialized" title="Link to this definition"></a></dt>
+<dd><p>Returns true if the sdk is initialized </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-GameHouse.SimpleSDK.ISimpleSdk.EventTracker">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1ac1a2b8669138b2b51ab44afb2f3fa304"></span><a class="reference internal" href="ieventtracker.html#interface-GameHouse.SimpleSDK.EventTracking.IEventTracker" title="interface: GameHouse.SimpleSDK.EventTracking.IEventTracker"><span class="pre">IEventTracker</span></a> <span class="sig-name descname"><span class="pre">EventTracker</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-GameHouse.SimpleSDK.ISimpleSdk.EventTracker" title="Link to this definition"></a></dt>
+<dd><p>Returns the event tracker instance </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cs var">
+<dt class="sig sig-object cs" id="var-GameHouse.SimpleSDK.ISimpleSdk.OnUserLoggedIn">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1ac795e7b87debf47603b137d0f556552a"></span><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Action" title="type: msdn ~&gt; System.Action"><span class="pre">Action</span></a> <span class="sig-name descname"><span class="pre">OnUserLoggedIn</span></span><a class="headerlink" href="#var-GameHouse.SimpleSDK.ISimpleSdk.OnUserLoggedIn" title="Link to this definition"></a></dt>
+<dd><p>Event to listen for when the User logs in </p>
+</dd></dl>
+
+<dl class="cs var">
+<dt class="sig sig-object cs" id="var-GameHouse.SimpleSDK.ISimpleSdk.OnUserLoggedOut">
+<span class="target" id="da/d8c/interfaceGameHouse_1_1SimpleSDK_1_1ISimpleSdk_1ae1d694b9e59ed2c91434b65f04af0fa3"></span><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Action" title="type: msdn ~&gt; System.Action"><span class="pre">Action</span></a> <span class="sig-name descname"><span class="pre">OnUserLoggedOut</span></span><a class="headerlink" href="#var-GameHouse.SimpleSDK.ISimpleSdk.OnUserLoggedOut" title="Link to this definition"></a></dt>
+<dd><p>Event to listen for when the User logged out </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 
 
