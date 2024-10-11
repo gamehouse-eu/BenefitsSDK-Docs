@@ -1,0 +1,11 @@
+API Documentation
+======================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: General
+
+   isimplesdk
+   ieventtracker
+   simplesdksettings
+   simplesdkmocksettings

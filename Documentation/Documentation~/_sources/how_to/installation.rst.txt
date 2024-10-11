@@ -1,0 +1,11 @@
+Installation
+======================
+
+To install the SimpleSDK, you need to add it via the Unity Package Manager.
+
+To open it, go to Window > Package Manager, click on the +, and 'add package from git url'.
+
+When prompted for a url, use `<insert url here>`.
+
+This should install the Sdk in your project, as well as all of it's dependencies.
+

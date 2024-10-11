@@ -1,0 +1,8 @@
+IEventTracker
+======================
+
+.. doxygeninterface:: GameHouse::SimpleSDK::EventTracking::IEventTracker
+   :project: SimpleSDK
+   :members:
+   :protected-members:
+   :private-members:
