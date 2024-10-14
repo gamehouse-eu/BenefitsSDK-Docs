@@ -2,7 +2,7 @@ Testing your Integration
 ============================================
 Before you do any testing in device, it's recommended that you test in the Editor.
 
-We provide a scriptable object called `SimpleSDKMockSettings`, where you can define how you want the sdk to respond to your calls.
+We provide a scriptable object called `BenefitsSDKMockSettings`, where you can define how you want the sdk to respond to your calls.
 
 To enable the usage of this, you need to add the compiler flag `GHSDK_DEBUG` in Player Settings.
 

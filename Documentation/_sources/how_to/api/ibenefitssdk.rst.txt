@@ -1,7 +1,7 @@
-IEventTracker
+IBenefitsSDK
 ======================
 
-.. doxygeninterface:: GameHouse::BenefitsSDK::EventTracking::IEventTracker
+.. doxygeninterface:: GameHouse::BenefitsSDK::IBenefitsSdk
    :project: BenefitsSDK
    :members:
    :protected-members:

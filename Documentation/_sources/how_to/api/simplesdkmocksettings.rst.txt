@@ -1,8 +1,0 @@
-SimpleSdkMockSettings
-======================
-
-.. doxygenclass:: GameHouse::SimpleSDK::Settings::SimpleSdkMockSettings
-   :project: SimpleSDK
-   :members:
-   :protected-members:
-   :private-members:

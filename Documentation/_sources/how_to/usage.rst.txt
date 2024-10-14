@@ -17,11 +17,11 @@ On future app startups, the SDK will take the saved tokens, and re-authenticate 
 Initialization
 ----------------------
 
-It's important, at the start of your game, to initialize the SimpleSDK. You can do this by calling:
+It's important, at the start of your game, to initialize the BenefitsSDK. You can do this by calling:
 
  .. code-block:: none
 
-    ISimpleSdk.instance.Initialize();
+    IBenefitsSdk.instance.Initialize();
 
 Keep in mind, that if you need to, you can await this call, so execution continues once the initialization is finished.
 
@@ -35,7 +35,7 @@ The first step, is to prompt the user for their email address, and make a call t
 
  .. code-block:: none
 
-    var success = await _simpleSdk.StartLogin(<user_email>);
+    var success = await _benefitsSdk.StartLogin(<user_email>);
 
 If sucess returns `true`, it means that an email with a validation code was sent to the user.
 
@@ -43,9 +43,9 @@ The next step, is to prompt the user to input that validation code, and make a c
 
  .. code-block:: none
     
-    var success = await _simpleSdk.Validate(<user_email>, <validation_code>);
+    var success = await _benefitsSdk.Validate(<user_email>, <validation_code>);
 
-If sucess returns `true`, it means the user is already logged in with the SimpleSdk.
+If success returns `true`, it means the user is already logged in with the BenefitsSdk.
 
 Keep in mind, that you only need to do this once (unless the user logs out). After each initialization, if the user has valid credentials he will be kept logged in.
 
@@ -57,7 +57,7 @@ To do this, make a call to:
 
  .. code-block:: none
 
-    ISimpleSdk.instance.Logout();
+    IBenefitsSdk.instance.Logout();
 
 Listen to events
 ----------------------
@@ -70,7 +70,7 @@ If you were asked to send any custom event by your GameHouse point of contact, y
 
  .. code-block:: none
 
-    ISimpleSdk.instance.EventTracker.TrackCustomEvent(<event_name>, <event_params>);
+    IBenefitsSdk.instance.EventTracker.TrackCustomEvent(<event_name>, <event_params>);
 
 
 Sample Scene

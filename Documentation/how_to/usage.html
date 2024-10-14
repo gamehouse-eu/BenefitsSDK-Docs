@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Testing your Integration" href="testing.html" />
-    <link rel="prev" title="SimpleSdkMockSettings" href="api/simplesdkmocksettings.html" /> 
+    <link rel="prev" title="BenefitsSdkMockSettings" href="api/benefitssdkmocksettings.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,10 +48,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">API Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/isimplesdk.html">ISimpleSDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ibenefitssdk.html">IBenefitsSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ieventtracker.html">IEventTracker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/simplesdksettings.html">SimpleSdkSettings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/simplesdkmocksettings.html">SimpleSdkMockSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/benefitssdksettings.html">BenefitsSdkSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/benefitssdkmocksettings.html">BenefitsSdkMockSettings</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
@@ -103,9 +103,9 @@
 </section>
 <section id="initialization">
 <h2>Initialization<a class="headerlink" href="#initialization" title="Link to this heading"></a></h2>
-<p>It’s important, at the start of your game, to initialize the SimpleSDK. You can do this by calling:</p>
+<p>It’s important, at the start of your game, to initialize the BenefitsSDK. You can do this by calling:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ISimpleSdk.instance.Initialize();
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.Initialize();
 </pre></div>
 </div>
 </div></blockquote>
@@ -117,18 +117,18 @@
 <p>At some point in your game, you will want the user to login. For this, you can create your own prefab, or use LoginContainer prefab as a base.</p>
 <p>The first step, is to prompt the user for their email address, and make a call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await _simpleSdk.StartLogin(&lt;user_email&gt;);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await _benefitsSdk.StartLogin(&lt;user_email&gt;);
 </pre></div>
 </div>
 </div></blockquote>
 <p>If sucess returns <cite>true</cite>, it means that an email with a validation code was sent to the user.</p>
 <p>The next step, is to prompt the user to input that validation code, and make a call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await _simpleSdk.Validate(&lt;user_email&gt;, &lt;validation_code&gt;);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await _benefitsSdk.Validate(&lt;user_email&gt;, &lt;validation_code&gt;);
 </pre></div>
 </div>
 </div></blockquote>
-<p>If sucess returns <cite>true</cite>, it means the user is already logged in with the SimpleSdk.</p>
+<p>If success returns <cite>true</cite>, it means the user is already logged in with the BenefitsSdk.</p>
 <p>Keep in mind, that you only need to do this once (unless the user logs out). After each initialization, if the user has valid credentials he will be kept logged in.</p>
 </section>
 <section id="logout">
@@ -136,7 +136,7 @@
 <p>If you detect that user is logged in, you need to provide an option to log out.</p>
 <p>To do this, make a call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ISimpleSdk.instance.Logout();
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.Logout();
 </pre></div>
 </div>
 </div></blockquote>
@@ -149,7 +149,7 @@
 <h2>Event Tracking<a class="headerlink" href="#event-tracking" title="Link to this heading"></a></h2>
 <p>If you were asked to send any custom event by your GameHouse point of contact, you can do that by making the call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ISimpleSdk.instance.EventTracker.TrackCustomEvent(&lt;event_name&gt;, &lt;event_params&gt;);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.EventTracker.TrackCustomEvent(&lt;event_name&gt;, &lt;event_params&gt;);
 </pre></div>
 </div>
 </div></blockquote>
@@ -165,7 +165,7 @@ This contains the scene itself, and some prefabs that you can use as a starting 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="api/simplesdkmocksettings.html" class="btn btn-neutral float-left" title="SimpleSdkMockSettings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/benefitssdkmocksettings.html" class="btn btn-neutral float-left" title="BenefitsSdkMockSettings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="testing.html" class="btn btn-neutral float-right" title="Testing your Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
