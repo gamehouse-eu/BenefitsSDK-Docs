@@ -105,11 +105,12 @@
 <h2>Initialization<a class="headerlink" href="#initialization" title="Link to this heading"></a></h2>
 <p>It’s important, at the start of your game, to initialize the BenefitsSDK. You can do this by calling:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.Initialize();
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.Initialize(adid);
 </pre></div>
 </div>
 </div></blockquote>
 <p>Keep in mind, that if you need to, you can await this call, so execution continues once the initialization is finished.</p>
+<p>This method has an optional parameter which is the Advertising Id (idfa on iOS, googleAdId on Android). If you have request the user permission to track it, please pass it to the SDK.</p>
 <p>After doing the initialization, you can access <cite>IsAuthenticated</cite> &amp;&amp; <cite>IsUserSubscribed</cite>.</p>
 </section>
 <section id="login">

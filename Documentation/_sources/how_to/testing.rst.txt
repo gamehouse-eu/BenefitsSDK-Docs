@@ -4,6 +4,8 @@ Before you do any testing in device, it's recommended that you test in the Edito
 
 We provide a scriptable object called `BenefitsSDKMockSettings`, where you can define how you want the sdk to respond to your calls.
 
+You can create one from the menu item GameHouse > Create Mock Settings. This will be created in Assets/Resources folder.
+
 To enable the usage of this, you need to add the compiler flag `GHSDK_DEBUG` in Player Settings.
 
 Once you have this enabled, you can test all of the different scenarios, to make sure the game is behaving properly.
