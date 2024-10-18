@@ -1,5 +1,5 @@
-GameHouse Simple SDK
-======================
+GameHouse Simple SDK (v1.0.0-rc7)
+======================================
 
 .. toctree::
    :maxdepth: 1

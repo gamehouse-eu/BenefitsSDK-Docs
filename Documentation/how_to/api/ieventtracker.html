@@ -6,15 +6,15 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IEventTracker &mdash; Simple SDK 0.0.1 documentation</title>
+  <title>IEventTracker &mdash; Benefits SDK 1.0.0-rc7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/doxygen_style.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/doxygen_style.css?v=47fc7e56" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/documentation_options.js?v=ee4c9981"></script>
       <script src="../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -73,7 +73,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Simple SDK</a>
+          <a href="../../index.html">Benefits SDK</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -94,10 +94,29 @@
              
   <section id="ieventtracker">
 <h1>IEventTracker<a class="headerlink" href="#ieventtracker" title="Link to this heading"></a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygeninterface: Cannot find class “GameHouse::BenefitsSDK::EventTracking::IEventTracker” in doxygen xml output for project “BenefitsSDK” from directory: ./build/xml</p>
+<dl class="cs interface">
+<dt class="sig sig-object cs" id="interface-GameHouse.BenefitsSDK.EventTracking.IEventTracker">
+<span class="target" id="db/dc0/interfaceGameHouse_1_1BenefitsSDK_1_1EventTracking_1_1IEventTracker"></span><em class="property"><span class="pre">interface</span> </em><span class="sig-name descname"><span class="pre">GameHouse.BenefitsSDK.EventTracking.IEventTracker</span></span><a class="headerlink" href="#interface-GameHouse.BenefitsSDK.EventTracking.IEventTracker" title="Link to this definition"></a></dt>
+<dd><p>Subclassed by GameHouse.BenefitsSDK.Internal.EventTracking.IPrivateEventTracker</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-GameHouse.BenefitsSDK.EventTracking.IEventTracker.TrackCustomEvent">
+<span class="target" id="db/dc0/interfaceGameHouse_1_1BenefitsSDK_1_1EventTracking_1_1IEventTracker_1a7ce32207cdd18e2be31087bee951a61b"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">TrackCustomEvent</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">eventName</span></em>, <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2" title="type: msdn ~&gt; System.Collections.Generic.Dictionary"><span class="pre">Dictionary</span></a><span class="pre">&lt;</span><span class="pre">string</span><span class="pre">,</span> <span class="pre">object</span><span class="pre">&gt;</span> <em><span class="pre">eventData</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-GameHouse.BenefitsSDK.EventTracking.IEventTracker.TrackCustomEvent" title="Link to this definition"></a></dt>
+<dd><p>Event to track any custom event </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param eventName<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the event to track.</p>
+</dd>
+<dt class="field-even">Param eventData<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing any data relevant to this event.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
+</dd></dl>
+
 </section>
 
 

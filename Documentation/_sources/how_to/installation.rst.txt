@@ -5,9 +5,9 @@ To install the BenefitsSDK, you need to add it via the Unity Package Manager.
 
 The first you need to do, is to add a new Scoped Registry to your project. To do this, go to Edit > Project Settings > Package Manager, and add the following:
 
-Name: GameHouse Sdk
-URL: https://npm.pkg.github.com/@gamehouse-eu
-Scope: com.gamehouse
+| Name: GameHouse Sdk
+| URL: https://npm.pkg.github.com/@gamehouse-eu
+| Scope: com.gamehouse
 
 Once you've done this, you can open the Package Manager.
 
@@ -17,7 +17,7 @@ When prompted for a name, use `com.gamehouse.benefitssdk`.
 
 This should install the Benefits SDK in your project, as well as all of it's dependencies.
 
-Before you can use the SDK, you need to create the settings file.gamehouse
+Before you can use the SDK, you need to create the settings file.
 
 You can create one from the menu item GameHouse > Create Settings. This will be created in Assets/Resources folder.
 
