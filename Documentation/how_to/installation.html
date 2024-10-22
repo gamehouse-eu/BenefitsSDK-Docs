@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Benefits SDK 1.0.0-rc10-update1 documentation</title>
+  <title>Installation &mdash; Benefits SDK 1.0.0-rc10-revision2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/doxygen_style.css?v=47fc7e56" />
@@ -14,7 +14,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=f13fcab3"></script>
+      <script src="../_static/documentation_options.js?v=93042eb1"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +48,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#add-gamehouse-scoped-registry">Add GameHouse Scoped Registry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-benefits-sdk-package">Install Benefits SDK Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-sdk-settings">Create SDK Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#assembly-definition">Assembly Definition</a></li>
@@ -103,21 +102,12 @@
              
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
-<section id="add-gamehouse-scoped-registry">
-<h2>Add GameHouse Scoped Registry<a class="headerlink" href="#add-gamehouse-scoped-registry" title="Link to this heading"></a></h2>
-<p>To install the BenefitsSDK, you need to add it via the Unity Package Manager.</p>
-<p>The first thing you need to do, is to add a new Scoped Registry to your project. To do this, go to Edit &gt; Project Settings &gt; Package Manager, and add the following scoped registry:</p>
-<div class="line-block">
-<div class="line">Name: GameHouse</div>
-<div class="line">URL: <a class="reference external" href="https://npm.pkg.github.com/&#64;gamehouse-eu">https://npm.pkg.github.com/&#64;gamehouse-eu</a></div>
-<div class="line">Scope: com.gamehouse</div>
-</div>
-</section>
 <section id="install-benefits-sdk-package">
 <h2>Install Benefits SDK Package<a class="headerlink" href="#install-benefits-sdk-package" title="Link to this heading"></a></h2>
-<p>Once you’ve done this, you can open the Package Manager.</p>
-<p>To open it, go to Window &gt; Package Manager, click on the +, and ‘add package by name’.</p>
-<p>When prompted for a name, use <cite>com.gamehouse.benefitssdk</cite>.</p>
+<p>You can get the latest version of the Benefits SDK <a href="#id1"><span class="problematic" id="id2">`here&lt;https://ghos-cdn.ghstatic.com/gameassets/benefitssdk/com.gamehouse.benefitssdk-1.0.0-rc10.tgz&gt;`_</span></a>.</p>
+<p>To install the BenefitsSDK, you need to add it via the Unity Package Manager.</p>
+<p>To open it, go to Window &gt; Package Manager, click on the +, and ‘add package from tarball’.</p>
+<p>When prompted for a file, select the Benefits SDK package you downloaded.</p>
 <p>This should install the Benefits SDK in your project, as well as all of it’s dependencies.</p>
 </section>
 <section id="create-sdk-settings">
