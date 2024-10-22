@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testing your Integration &mdash; Benefits SDK  documentation</title>
+  <title>Testing your Integration &mdash; Benefits SDK 1.0.0-rc10 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/doxygen_style.css?v=47fc7e56" />
@@ -14,12 +14,13 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/documentation_options.js?v=60be50ab"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Documentation" href="api/api.html" />
     <link rel="prev" title="Usage" href="usage.html" /> 
 </head>
 
@@ -45,7 +46,28 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#add-gamehouse-scoped-registry">Add GameHouse Scoped Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-benefits-sdk-package">Install Benefits SDK Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#create-sdk-settings">Create SDK Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#assembly-definition">Assembly Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#how-it-works">How it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#initialization">Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#login">Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#logout">Logout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#event-tracking">Event Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#sample-scene">Sample Scene</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Testing your Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testing-in-the-editor">Testing in the Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-on-device">Testing on device</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">API Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/ibenefitssdk.html">IBenefitsSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ieventtracker.html">IEventTracker</a></li>
@@ -53,17 +75,6 @@
 <li class="toctree-l2"><a class="reference internal" href="api/benefitssdkmocksettings.html">BenefitsSdkMockSettings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#how-this-works">How this works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#initialization">Initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#login">Login</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#logout">Logout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#listen-to-events">Listen to events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#event-tracking">Event Tracking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#sample-scene">Sample Scene</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Testing your Integration</a></li>
 </ul>
 
         </div>
@@ -92,12 +103,60 @@
              
   <section id="testing-your-integration">
 <h1>Testing your Integration<a class="headerlink" href="#testing-your-integration" title="Link to this heading"></a></h1>
+<p>We recommend you to test this scenarios before releasing your game, both in the Editor, and later on device.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Try to log in with a user who is not a subscriber</dt><dd><ul>
+<li><p>Should be able to log in</p></li>
+<li><p>Should not be able to access subscriber benefits</p></li>
+<li><p>Logout button should be visible</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Try to log in with a user who is a subscriber</dt><dd><ul>
+<li><p>Should be able to log in</p></li>
+<li><p>Should be able to access subscriber benefits</p></li>
+<li><p>Logout button should be visible</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Once logged in (with both subscriber and not subscriber), try to log out</dt><dd><ul>
+<li><p>Should be able to log out</p></li>
+<li><p>Should not be able to access subscriber benefits</p></li>
+<li><p>Login button should appear again</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Once logged in (with both subscriber and not subscriber), reopen game and check if it’s still logged in</dt><dd><ul>
+<li><p>Should be able to access subscriber benefits if it was a subscriber</p></li>
+<li><p>Should not be able to access subscriber benefits if it was not a subscriber</p></li>
+<li><p>Logout button should be visible</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="testing-in-the-editor">
+<h2>Testing in the Editor<a class="headerlink" href="#testing-in-the-editor" title="Link to this heading"></a></h2>
 <p>Before you do any testing in device, it’s recommended that you test in the Editor.</p>
 <p>We provide a scriptable object called <cite>BenefitsSDKMockSettings</cite>, where you can define how you want the sdk to respond to your calls.</p>
 <p>You can create one from the menu item GameHouse &gt; Create Mock Settings. This will be created in Assets/Resources folder.</p>
-<p>To enable the usage of this, you need to add the compiler flag <cite>GHSDK_DEBUG</cite> in Player Settings.</p>
+<p>To enable the usage of this, you need to add the compiler flag <cite>GHSDK_DEBUG</cite> in Player Settings. If you are not sure how to add one, you can check the [Unity Documentation](<a class="reference external" href="https://docs.unity3d.com/Manual/custom-scripting-symbols.html">https://docs.unity3d.com/Manual/custom-scripting-symbols.html</a>).</p>
 <p>Once you have this enabled, you can test all of the different scenarios, to make sure the game is behaving properly.</p>
 <p>After you validated that it’s working properly, you can turn it off, and test with the real implementation.</p>
+</section>
+<section id="testing-on-device">
+<h2>Testing on device<a class="headerlink" href="#testing-on-device" title="Link to this heading"></a></h2>
+<p>Once you are ready to test on device, you can remove the previously added compiler flag, and test the real implementation in a build.</p>
+<p>While testing, you can use your real email account. If you want to test the flow as a subscriber, you first need to send your Global Id to your GameHouse producer, so they can create a testing account for you.</p>
+<p>To get your Global Id, you can do the login flow in the editor, with the same email, and without the compiler flag, and it should print your Global Id in the console.</p>
+</section>
 </section>
 
 
@@ -105,6 +164,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Benefits SDK 1.0.0-rc10 documentation</title>
+  <title>Introduction &mdash; Benefits SDK 1.0.0-rc10 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/doxygen_style.css?v=47fc7e56" />
@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Usage" href="usage.html" />
-    <link rel="prev" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="GameHouse Simple SDK (v1.0.0-rc10)" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,12 +46,12 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#add-gamehouse-scoped-registry">Add GameHouse Scoped Registry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-benefits-sdk-package">Install Benefits SDK Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-sdk-settings">Create SDK Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#assembly-definition">Assembly Definition</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#add-gamehouse-scoped-registry">Add GameHouse Scoped Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-benefits-sdk-package">Install Benefits SDK Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#create-sdk-settings">Create SDK Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#assembly-definition">Assembly Definition</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
@@ -91,9 +91,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Installation</li>
+      <li class="breadcrumb-item active">Introduction</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/how_to/installation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/how_to/introduction.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -101,42 +101,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
-<section id="add-gamehouse-scoped-registry">
-<h2>Add GameHouse Scoped Registry<a class="headerlink" href="#add-gamehouse-scoped-registry" title="Link to this heading"></a></h2>
-<p>To install the BenefitsSDK, you need to add it via the Unity Package Manager.</p>
-<p>The first thing you need to do, is to add a new Scoped Registry to your project. To do this, go to Edit &gt; Project Settings &gt; Package Manager, and add the following scoped registry:</p>
-<div class="line-block">
-<div class="line">Name: GameHouse</div>
-<div class="line">URL: <a class="reference external" href="https://npm.pkg.github.com/&#64;gamehouse-eu">https://npm.pkg.github.com/&#64;gamehouse-eu</a></div>
-<div class="line">Scope: com.gamehouse</div>
-</div>
-</section>
-<section id="install-benefits-sdk-package">
-<h2>Install Benefits SDK Package<a class="headerlink" href="#install-benefits-sdk-package" title="Link to this heading"></a></h2>
-<p>Once you’ve done this, you can open the Package Manager.</p>
-<p>To open it, go to Window &gt; Package Manager, click on the +, and ‘add package by name’.</p>
-<p>When prompted for a name, use <cite>com.gamehouse.benefitssdk</cite>.</p>
-<p>This should install the Benefits SDK in your project, as well as all of it’s dependencies.</p>
-</section>
-<section id="create-sdk-settings">
-<h2>Create SDK Settings<a class="headerlink" href="#create-sdk-settings" title="Link to this heading"></a></h2>
-<p>Before you can use the SDK, you need to create the settings file.</p>
-<p>You can create one from the menu item GameHouse &gt; Create Settings. This will be created in Assets/Resources folder.</p>
-</section>
-<section id="assembly-definition">
-<h2>Assembly Definition<a class="headerlink" href="#assembly-definition" title="Link to this heading"></a></h2>
-<p>The Benefits SDK uses it’s own Assembly Definition. If you are using Assembly Definitions in your project, you will need to add the Benefits SDK to your [Assembly Definition Reference](<a class="reference external" href="https://docs.unity3d.com/Manual/assembly-definitions-referencing.html">https://docs.unity3d.com/Manual/assembly-definitions-referencing.html</a>).</p>
-</section>
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>The idea behind the Benefits SDK is to give developers a quick and easy way to provide existing GameHouse subscribers benefits in their game.</p>
+<p>With just a few lines of code, you are able to check if a user is a GameHouse subscriber and provide them with benefits such as free in-game currency, items, or levels.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="GameHouse Simple SDK (v1.0.0-rc10)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

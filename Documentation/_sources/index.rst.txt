@@ -1,13 +1,15 @@
-GameHouse Simple SDK (v)
+GameHouse Simple SDK (v1.0.0-rc10)
 ======================================
 
 .. toctree::
    :maxdepth: 1
    :caption: General
 
+   how_to/introduction
    how_to/installation
-   how_to/api/api
    how_to/usage
    how_to/testing
+   how_to/api/api
+
 
 

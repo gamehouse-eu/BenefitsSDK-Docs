@@ -1,0 +1,10 @@
+Introduction
+======================
+
+The idea behind the Benefits SDK is to give developers a quick and easy way to provide existing GameHouse subscribers benefits in their game.
+
+With just a few lines of code, you are able to check if a user is a GameHouse subscriber and provide them with benefits such as free in-game currency, items, or levels. 
+
+
+
+

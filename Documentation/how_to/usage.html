@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Usage &mdash; Benefits SDK  documentation</title>
+  <title>Usage &mdash; Benefits SDK 1.0.0-rc10 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/doxygen_style.css?v=47fc7e56" />
@@ -14,14 +14,14 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/documentation_options.js?v=60be50ab"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Testing your Integration" href="testing.html" />
-    <link rel="prev" title="BenefitsSdkMockSettings" href="api/benefitssdkmocksettings.html" /> 
+    <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +46,28 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#add-gamehouse-scoped-registry">Add GameHouse Scoped Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-benefits-sdk-package">Install Benefits SDK Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#create-sdk-settings">Create SDK Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#assembly-definition">Assembly Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-works">How it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initialization">Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login">Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logout">Logout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#event-tracking">Event Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-scene">Sample Scene</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing your Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-in-the-editor">Testing in the Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-on-device">Testing on device</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">API Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/ibenefitssdk.html">IBenefitsSDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ieventtracker.html">IEventTracker</a></li>
@@ -54,17 +75,6 @@
 <li class="toctree-l2"><a class="reference internal" href="api/benefitssdkmocksettings.html">BenefitsSdkMockSettings</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#how-this-works">How this works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#initialization">Initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#login">Login</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#logout">Logout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#listen-to-events">Listen to events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#event-tracking">Event Tracking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sample-scene">Sample Scene</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing your Integration</a></li>
 </ul>
 
         </div>
@@ -93,11 +103,11 @@
              
   <section id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
-<section id="how-this-works">
-<h2>How this works<a class="headerlink" href="#how-this-works" title="Link to this heading"></a></h2>
+<section id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h2>
 <p>To authenticate a user, you need to make some calls against our SDK.</p>
 <p>The first step, is asking the user to input their email. Once you have the email, you need to call <cite>StartLogin</cite>, which will send a One Time Password (OTP) to the provided email address.</p>
-<p>After they received the code by email, you need to call <cite>Validate</cite> which will send both the email adress and the OTP to authenticate properly.</p>
+<p>After they received the code by email, you need to call <cite>Validate</cite> which will send both the email address and the OTP to authenticate properly.</p>
 <p>Once authenticated, the SDK will store the login token locally, which will persist until the user calls <cite>Logout</cite> explicitly.</p>
 <p>On future app startups, the SDK will take the saved tokens, and re-authenticate on background when calling the <cite>Initialize</cite>.</p>
 </section>
@@ -105,52 +115,73 @@
 <h2>Initialization<a class="headerlink" href="#initialization" title="Link to this heading"></a></h2>
 <p>It’s important, at the start of your game, to initialize the BenefitsSDK. You can do this by calling:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.Initialize(adid);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.Instance.Initialize();
 </pre></div>
 </div>
 </div></blockquote>
 <p>Keep in mind, that if you need to, you can await this call, so execution continues once the initialization is finished.</p>
 <p>This method has an optional parameter which is the Advertising Id (idfa on iOS, googleAdId on Android). If you have request the user permission to track it, please pass it to the SDK.</p>
-<p>After doing the initialization, you can access <cite>IsAuthenticated</cite> &amp;&amp; <cite>IsUserSubscribed</cite>.</p>
-</section>
-<section id="login">
-<h2>Login<a class="headerlink" href="#login" title="Link to this heading"></a></h2>
-<p>At some point in your game, you will want the user to login. For this, you can create your own prefab, or use LoginContainer prefab as a base.</p>
-<p>The first step, is to prompt the user for their email address, and make a call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await _benefitsSdk.StartLogin(&lt;user_email&gt;);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.Instance.Initialize(&lt;advertising id&gt;);
 </pre></div>
 </div>
 </div></blockquote>
-<p>If sucess returns <cite>true</cite>, it means that an email with a validation code was sent to the user.</p>
+<p>After the initialization is done, you can access the <cite>IsUserLoggedIn</cite> &amp;&amp; <cite>IsUserSubscribed</cite> properties.</p>
+</section>
+<section id="login">
+<h2>Login<a class="headerlink" href="#login" title="Link to this heading"></a></h2>
+<p>At some point in your game, you will want the user to login, to be able to check their subscription status.</p>
+<p>The first step, is to prompt the user for their email address, and make a call to:</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await IBenefitsSdk.Instance.StartLogin(&lt;user_email&gt;);
+</pre></div>
+</div>
+</div></blockquote>
+<p>If success returns <cite>true</cite>, it means that an email with a validation code was sent to the user.</p>
 <p>The next step, is to prompt the user to input that validation code, and make a call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await _benefitsSdk.Validate(&lt;user_email&gt;, &lt;validation_code&gt;);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var success = await IBenefitsSdk.Instance.Validate(&lt;user_email&gt;, &lt;validation_code&gt;);
 </pre></div>
 </div>
 </div></blockquote>
 <p>If success returns <cite>true</cite>, it means the user is already logged in with the BenefitsSdk.</p>
-<p>Keep in mind, that you only need to do this once (unless the user logs out). After each initialization, if the user has valid credentials he will be kept logged in.</p>
+<p>Keep in mind, that you only need to do this once (unless the user logs out). On future calls to the <cite>Initialize</cite> method, the SDK will automatically re-authenticate the user, if needed.</p>
+<p>You can also subscribe to the <cite>OnUserLoggedIn</cite> event, to know when the user has successfully logged in.</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>private void OnEnable()
+{
+    IBenefitsSdk.OnUserLoggedIn += OnUserLoggedIn;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<p>If you don’t want to implement this from scratch, or you want to see a working example, you can import the <cite>Example Scene</cite> from the Package Manager UI &amp; use the <cite>LoginPopup</cite> prefab.</p>
 </section>
 <section id="logout">
 <h2>Logout<a class="headerlink" href="#logout" title="Link to this heading"></a></h2>
 <p>If you detect that user is logged in, you need to provide an option to log out.</p>
 <p>To do this, make a call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.Logout();
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.Instance.Logout();
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="listen-to-events">
-<h2>Listen to events<a class="headerlink" href="#listen-to-events" title="Link to this heading"></a></h2>
-<p>The SDK provides two events <cite>OnUserLoggedIn</cite> &amp; <cite>OnUserLoggedOut</cite> that you can listen to and react accordingly.</p>
+<p>This call will delete the stored credentials, and the user will be logged out.</p>
+<p>You can also subscribe to the <cite>OnUserLoggedOut</cite> event, to know when the user has successfully logged out.</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>private void OnEnable()
+{
+    IBenefitsSdk.OnUserLoggedOut += OnUserLoggedOut;
+}
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <section id="event-tracking">
 <h2>Event Tracking<a class="headerlink" href="#event-tracking" title="Link to this heading"></a></h2>
 <p>If you were asked to send any custom event by your GameHouse point of contact, you can do that by making the call to:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.instance.EventTracker.TrackCustomEvent(&lt;event_name&gt;, &lt;event_params&gt;);
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.Instance.EventTracker.TrackCustomEvent(&lt;event_name&gt;, &lt;event_params&gt;);
 </pre></div>
 </div>
 </div></blockquote>
@@ -166,7 +197,7 @@ This contains the scene itself, and some prefabs that you can use as a starting 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="api/benefitssdkmocksettings.html" class="btn btn-neutral float-left" title="BenefitsSdkMockSettings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="testing.html" class="btn btn-neutral float-right" title="Testing your Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

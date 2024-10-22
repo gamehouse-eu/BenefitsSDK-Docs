@@ -1,14 +1,14 @@
 Usage
 ======================
 
-How this works
+How it works
 ----------------
 
 To authenticate a user, you need to make some calls against our SDK.
 
 The first step, is asking the user to input their email. Once you have the email, you need to call `StartLogin`, which will send a One Time Password (OTP) to the provided email address.
 
-After they received the code by email, you need to call `Validate` which will send both the email adress and the OTP to authenticate properly.
+After they received the code by email, you need to call `Validate` which will send both the email address and the OTP to authenticate properly.
 
 Once authenticated, the SDK will store the login token locally, which will persist until the user calls `Logout` explicitly.
 
@@ -21,35 +21,50 @@ It's important, at the start of your game, to initialize the BenefitsSDK. You ca
 
  .. code-block:: none
 
-    IBenefitsSdk.instance.Initialize(adid);
+    IBenefitsSdk.Instance.Initialize();
 
 Keep in mind, that if you need to, you can await this call, so execution continues once the initialization is finished.
 
 This method has an optional parameter which is the Advertising Id (idfa on iOS, googleAdId on Android). If you have request the user permission to track it, please pass it to the SDK.
 
-After doing the initialization, you can access `IsAuthenticated` && `IsUserSubscribed`.
+ .. code-block:: none
+
+    IBenefitsSdk.Instance.Initialize(<advertising id>);
+
+After the initialization is done, you can access the `IsUserLoggedIn` && `IsUserSubscribed` properties.
 
 Login
 ----------------------
-At some point in your game, you will want the user to login. For this, you can create your own prefab, or use LoginContainer prefab as a base.
+At some point in your game, you will want the user to login, to be able to check their subscription status.
 
 The first step, is to prompt the user for their email address, and make a call to:
 
  .. code-block:: none
 
-    var success = await _benefitsSdk.StartLogin(<user_email>);
+    var success = await IBenefitsSdk.Instance.StartLogin(<user_email>);
 
-If sucess returns `true`, it means that an email with a validation code was sent to the user.
+If success returns `true`, it means that an email with a validation code was sent to the user.
 
 The next step, is to prompt the user to input that validation code, and make a call to:
 
  .. code-block:: none
     
-    var success = await _benefitsSdk.Validate(<user_email>, <validation_code>);
+    var success = await IBenefitsSdk.Instance.Validate(<user_email>, <validation_code>);
 
 If success returns `true`, it means the user is already logged in with the BenefitsSdk.
 
-Keep in mind, that you only need to do this once (unless the user logs out). After each initialization, if the user has valid credentials he will be kept logged in.
+Keep in mind, that you only need to do this once (unless the user logs out). On future calls to the `Initialize` method, the SDK will automatically re-authenticate the user, if needed.
+
+You can also subscribe to the `OnUserLoggedIn` event, to know when the user has successfully logged in.
+
+ .. code-block:: none
+    
+       private void OnEnable()
+       {
+           IBenefitsSdk.OnUserLoggedIn += OnUserLoggedIn;
+       }
+       
+If you don't want to implement this from scratch, or you want to see a working example, you can import the `Example Scene` from the Package Manager UI & use the `LoginPopup` prefab.
 
 Logout
 ----------------------
@@ -59,12 +74,18 @@ To do this, make a call to:
 
  .. code-block:: none
 
-    IBenefitsSdk.instance.Logout();
+    IBenefitsSdk.Instance.Logout();
+    
+This call will delete the stored credentials, and the user will be logged out.
 
-Listen to events
-----------------------
+You can also subscribe to the `OnUserLoggedOut` event, to know when the user has successfully logged out.
 
-The SDK provides two events `OnUserLoggedIn` & `OnUserLoggedOut` that you can listen to and react accordingly.
+ .. code-block:: none
+    
+       private void OnEnable()
+       {
+           IBenefitsSdk.OnUserLoggedOut += OnUserLoggedOut;
+       }
 
 Event Tracking
 ----------------------
@@ -72,7 +93,7 @@ If you were asked to send any custom event by your GameHouse point of contact, y
 
  .. code-block:: none
 
-    IBenefitsSdk.instance.EventTracker.TrackCustomEvent(<event_name>, <event_params>);
+    IBenefitsSdk.Instance.EventTracker.TrackCustomEvent(<event_name>, <event_params>);
 
 
 Sample Scene
