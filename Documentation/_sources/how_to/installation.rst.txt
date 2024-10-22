@@ -33,6 +33,6 @@ You can create one from the menu item GameHouse > Create Settings. This will be 
 Assembly Definition
 ------------------------------
 
-The Benefits SDK uses it's own Assembly Definition. If you are using Assembly Definitions in your project, you will need to add the Benefits SDK to your [Assembly Definition Reference](https://docs.unity3d.com/Manual/assembly-definitions-referencing.html).
+The Benefits SDK uses it's own Assembly Definition. If you are using Assembly Definitions in your project, you will need to add the Benefits SDK to your `Assembly Definition Reference <https://docs.unity3d.com/Manual/assembly-definitions-referencing.html>`_.
 
 

@@ -29,7 +29,7 @@ We provide a scriptable object called `BenefitsSDKMockSettings`, where you can d
 
 You can create one from the menu item GameHouse > Create Mock Settings. This will be created in Assets/Resources folder.
 
-To enable the usage of this, you need to add the compiler flag `GHSDK_DEBUG` in Player Settings. If you are not sure how to add one, you can check the [Unity Documentation](https://docs.unity3d.com/Manual/custom-scripting-symbols.html).
+To enable the usage of this, you need to add the compiler flag `GHSDK_DEBUG` in Player Settings. If you are not sure how to add one, you can check the `Unity Documentation <https://docs.unity3d.com/Manual/custom-scripting-symbols.html>`_.
 
 Once you have this enabled, you can test all of the different scenarios, to make sure the game is behaving properly.
 
