@@ -4,7 +4,7 @@ Usage
 How it works
 ----------------
 
-To authenticate a user, you need to make some calls against our SDK.
+In order to use the SDK, you need to authenticate the user.
 
 The first step, is asking the user to input their email. Once you have the email, you need to call `StartLogin`, which will send a One Time Password (OTP) to the provided email address.
 

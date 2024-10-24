@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Usage &mdash; Benefits SDK 1.0.0-beta1 documentation</title>
+  <title>Usage &mdash; Benefits SDK 1.0.0-rc11 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/doxygen_style.css?v=47fc7e56" />
@@ -14,7 +14,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=92cb7abb"></script>
+      <script src="../_static/documentation_options.js?v=c4c6d4b2"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -104,7 +104,7 @@
 <h1>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
 <section id="how-it-works">
 <h2>How it works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h2>
-<p>To authenticate a user, you need to make some calls against our SDK.</p>
+<p>In order to use the SDK, you need to authenticate the user.</p>
 <p>The first step, is asking the user to input their email. Once you have the email, you need to call <cite>StartLogin</cite>, which will send a One Time Password (OTP) to the provided email address.</p>
 <p>After they received the code by email, you need to call <cite>Validate</cite> which will send both the email address and the OTP to authenticate properly.</p>
 <p>Once authenticated, the SDK will store the login token locally, which will persist until the user calls <cite>Logout</cite> explicitly.</p>
