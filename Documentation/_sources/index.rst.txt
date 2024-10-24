@@ -1,4 +1,4 @@
-GameHouse Simple SDK (v1.0.0-rc10-revision2)
+GameHouse Simple SDK (v1.0.0-beta1)
 ======================================
 
 .. toctree::
