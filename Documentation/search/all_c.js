@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unitymainthreaddispatcher_36',['UnityMainThreadDispatcher',['../dd/da5/classPimDeWitte_1_1UnityMainThreadDispatcher_1_1UnityMainThreadDispatcher.html',1,'PimDeWitte::UnityMainThreadDispatcher']]]
+  ['trackcustomevent_36',['TrackCustomEvent',['../db/dc0/interfaceGameHouse_1_1BenefitsSDK_1_1EventTracking_1_1IEventTracker.html#a7ce32207cdd18e2be31087bee951a61b',1,'GameHouse::BenefitsSDK::EventTracking::IEventTracker']]]
 ];

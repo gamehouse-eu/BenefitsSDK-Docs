@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pimdewitte_30',['PimDeWitte',['../d0/d94/namespacePimDeWitte.html',1,'']]],
-  ['unitymainthreaddispatcher_31',['UnityMainThreadDispatcher',['../dc/d42/namespacePimDeWitte_1_1UnityMainThreadDispatcher.html',1,'PimDeWitte']]]
+  ['onuserloggedin_29',['OnUserLoggedIn',['../dd/d06/interfaceGameHouse_1_1BenefitsSDK_1_1IBenefitsSdk.html#a77aa6a39f72a6865ba5d48bf3e35eb95',1,'GameHouse::BenefitsSDK::IBenefitsSdk']]],
+  ['onuserloggedout_30',['OnUserLoggedOut',['../dd/d06/interfaceGameHouse_1_1BenefitsSDK_1_1IBenefitsSdk.html#a2405ab6cd4369320111afdb7fe238e64',1,'GameHouse::BenefitsSDK::IBenefitsSdk']]]
 ];
