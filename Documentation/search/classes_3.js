@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mocknativeappinfo_47',['MockNativeAppInfo',['../d2/d6f/classGameHouse_1_1BenefitsSDK_1_1Internal_1_1AppInfo_1_1MockNativeAppInfo.html',1,'GameHouse::BenefitsSDK::Internal::AppInfo']]]
+  ['mocknativeappinfo_0',['MockNativeAppInfo',['../d2/d6f/classGameHouse_1_1BenefitsSDK_1_1Internal_1_1AppInfo_1_1MockNativeAppInfo.html',1,'GameHouse::BenefitsSDK::Internal::AppInfo']]]
 ];
