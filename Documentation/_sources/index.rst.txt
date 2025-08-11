@@ -1,4 +1,4 @@
-GameHouse Benefits SDK (v1.0.2)
+GameHouse Benefits SDK (v1.0.3)
 ======================================
 
 .. toctree::
