@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Usage &mdash; Benefits SDK 1.0.3 documentation</title>
+  <title>Usage &mdash; Benefits SDK 1.0.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/doxygen_style.css?v=47fc7e56" />
@@ -14,7 +14,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=baaebd52"></script>
+      <script src="../_static/documentation_options.js?v=d55fa986"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -58,6 +58,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#initialization">Initialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#login">Login</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#logout">Logout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#refreshing-subscription-status">Refreshing subscription status</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#event-tracking">Event Tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sample-scene">Sample Scene</a></li>
 </ul>
@@ -173,6 +174,30 @@
     IBenefitsSdk.OnUserLoggedOut += OnUserLoggedOut;
 }
 </pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="refreshing-subscription-status">
+<h2>Refreshing subscription status<a class="headerlink" href="#refreshing-subscription-status" title="Link to this heading"></a></h2>
+<p>The BenefitsSDK will automatically request a refresh of the user’s subscription status whenever your game is resumed from the background.
+To respond to this, you can listen to the <cite>OnSubscriptionStatusChanged</cite> event.</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IBenefitsSdk.OnSubscriptionStatusChanged += OnSubscriptionStatusChanged;
+private void OnSubscriptionStatusChanged(bool isUserSubscribed)
+{
+    // Deal with subscription benefits as needed.
+}
+</pre></div>
+</div>
+</div></blockquote>
+<p>If you need to fetch the status manually, you can call:</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var isUserSubscribed = await IBenefitsSdk.Instance.RefreshSubscriptionStatus();
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will also trigger OnSubscriptionStatusChanged if the status has changed.</p>
 </div>
 </div></blockquote>
 </section>

@@ -87,6 +87,28 @@ You can also subscribe to the `OnUserLoggedOut` event, to know when the user has
            IBenefitsSdk.OnUserLoggedOut += OnUserLoggedOut;
        }
 
+Refreshing subscription status
+------------------------------
+The BenefitsSDK will automatically request a refresh of the user's subscription status whenever your game is resumed from the background.
+To respond to this, you can listen to the `OnSubscriptionStatusChanged` event.
+
+ .. code-block:: none
+    
+       IBenefitsSdk.OnSubscriptionStatusChanged += OnSubscriptionStatusChanged;
+       private void OnSubscriptionStatusChanged(bool isUserSubscribed)
+       {
+           // Deal with subscription benefits as needed.
+       }
+
+If you need to fetch the status manually, you can call:
+
+ .. code-block:: none
+
+    var isUserSubscribed = await IBenefitsSdk.Instance.RefreshSubscriptionStatus();
+    
+ .. note::
+     This will also trigger OnSubscriptionStatusChanged if the status has changed.
+
 Event Tracking
 ----------------------
 If you were asked to send any custom event by your GameHouse point of contact, you can do that by making the call to:

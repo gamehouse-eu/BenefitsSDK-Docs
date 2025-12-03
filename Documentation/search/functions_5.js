@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validate_0',['Validate',['../dd/d06/interfaceGameHouse_1_1BenefitsSDK_1_1IBenefitsSdk.html#afe752ffb437f0875657d2d6e85bfdd2c',1,'GameHouse::BenefitsSDK::IBenefitsSdk']]]
+  ['trackcustomevent_0',['TrackCustomEvent',['../db/dc0/interfaceGameHouse_1_1BenefitsSDK_1_1EventTracking_1_1IEventTracker.html#a7ce32207cdd18e2be31087bee951a61b',1,'GameHouse::BenefitsSDK::EventTracking::IEventTracker']]]
 ];

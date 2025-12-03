@@ -90,6 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4a8d6e78b5885549f7d44bacac3a5d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs to be called when the game starts <br  />
   <br /></td></tr>
 <tr class="separator:a4a8d6e78b5885549f7d44bacac3a5d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6d33b4ee171bf4c8ad29b535320b4b" id="r_aae6d33b4ee171bf4c8ad29b535320b4b"><td class="memItemLeft" align="right" valign="top"><a id="aae6d33b4ee171bf4c8ad29b535320b4b" name="aae6d33b4ee171bf4c8ad29b535320b4b"></a>
+Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>RefreshSubscriptionStatus</b> ()</td></tr>
+<tr class="memdesc:aae6d33b4ee171bf4c8ad29b535320b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can be called to prompt a refresh of the status of the user, (OnSubscriptionStatusChanged will trigger if the status has changed) <br /></td></tr>
+<tr class="separator:aae6d33b4ee171bf4c8ad29b535320b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83769608a613ad8a2e7ccd11fc1da670" id="r_a83769608a613ad8a2e7ccd11fc1da670"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d06/interfaceGameHouse_1_1BenefitsSDK_1_1IBenefitsSdk.html#a83769608a613ad8a2e7ccd11fc1da670">StartLogin</a> (string email)</td></tr>
 <tr class="memdesc:a83769608a613ad8a2e7ccd11fc1da670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the login process.  <br /></td></tr>
 <tr class="separator:a83769608a613ad8a2e7ccd11fc1da670"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,6 +115,9 @@ static Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnUserLogged
 static Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnUserLoggedOut</b></td></tr>
 <tr class="memdesc:a2405ab6cd4369320111afdb7fe238e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event to listen for when the User logged out. <br /></td></tr>
 <tr class="separator:a2405ab6cd4369320111afdb7fe238e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d49f6f2ebeed6107234662c960d551" id="r_a99d49f6f2ebeed6107234662c960d551"><td class="memItemLeft" align="right" valign="top">static Action&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d06/interfaceGameHouse_1_1BenefitsSDK_1_1IBenefitsSdk.html#a99d49f6f2ebeed6107234662c960d551">OnSubscriptionStatusChanged</a></td></tr>
+<tr class="memdesc:a99d49f6f2ebeed6107234662c960d551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event to listen for when the User logged out.  <br /></td></tr>
+<tr class="separator:a99d49f6f2ebeed6107234662c960d551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -225,6 +232,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSdkInitialized</b><
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Response from the backend</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a99d49f6f2ebeed6107234662c960d551" name="a99d49f6f2ebeed6107234662c960d551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d49f6f2ebeed6107234662c960d551">&#9670;&#160;</a></span>OnSubscriptionStatusChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;bool&gt; GameHouse.BenefitsSDK.IBenefitsSdk.OnSubscriptionStatusChanged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Event to listen for when the User logged out. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the user is subscribed</dd></dl>
 
 </div>
 </div>
